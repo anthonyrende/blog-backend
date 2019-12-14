@@ -24,6 +24,12 @@ const todoRouter = require("./todos/todo.router");
 
 server.use('/api/v1/todos', todoRouter);
 
+// const client = new Client({
+//     connectionString: process.env.DATABASE_URL,
+//     ssl: true,
+//   });
+  
+//   client.connect();
 
 server.get("/", (req, res) => {
     res.status(200).json(`Welcome to the Jungle`);
