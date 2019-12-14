@@ -1,6 +1,7 @@
 require('dotenv').config();
 const server = require('./api/server.js');
-const defaults = require('./config/defaults')
+const defaults = require('./oldserver/config/defaults')
+//./server/config/defaults
 // const Sequelize = require('sequelize'), sequelize = null
 // const http = require('http')
 
