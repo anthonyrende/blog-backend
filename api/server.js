@@ -5,11 +5,11 @@ const secrets = require("../config/secrets.js");
 // const request = require('request')
 const server = express();
 
-import bodyParser from "body-parser"
-// const bodyParser = require("body-parser")
-// Parse incoming requests data
-server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({ extended: false }));
+// import bodyParser from "body-parser"
+// // const bodyParser = require("body-parser")
+// // Parse incoming requests data
+// server.use(bodyParser.json());
+// server.use(bodyParser.urlencoded({ extended: false }));
 
 // console.log("environment:", secrets.environment);
 

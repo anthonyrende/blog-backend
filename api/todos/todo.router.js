@@ -1,6 +1,6 @@
 // import express from 'express';
 const router = require('express').Router()
-import db from '../../db/db'
+// import db from '../../db/db'
 // const db = require('../../db/db')
 
 // get all todos
@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     res.status(200).send({
       success: 'true',
       message: 'todos retrieved successfully!',
-      todos: db
+    //   todos: db
     })
   });
 
