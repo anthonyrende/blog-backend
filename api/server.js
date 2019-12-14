@@ -7,8 +7,8 @@ const secrets = require("../config/secrets.js");
 import bodyParser from "body-parser"
 
 // Parse incoming requests data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// server.use(bodyParser.json());
+// server.use(bodyParser.urlencoded({ extended: false }));
 
 // console.log("environment:", secrets.environment);
 const server = express();

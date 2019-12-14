@@ -42,4 +42,29 @@ router.post('/', (req, res) => {
   })
 })
 
+// get a single todo by id
+
+router.get('/:id', (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    db.map((todo) => {
+    try {
+        if (todo.id === id) {
+            return res.status(200).send({
+              success: 'true',
+              message: 'todo retrieved successfully',
+              todo,
+            });
+        }
+    }
+    catch (err) {
+        return res.status(404).send({
+            success: 'false',
+            message: 'todo does not exist',
+           })
+           .json(err.message);
+    }
+    })
+})
+
+
 module.exports = router;
