@@ -1,3 +1,5 @@
+import models from '../models';
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Todo = sequelize.define('Todo', {
