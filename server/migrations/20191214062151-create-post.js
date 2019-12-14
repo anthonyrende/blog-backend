@@ -15,9 +15,12 @@ module.exports = {
         type: Sequelize.TEXT
       },
       userId: {
+        allowNull: false,
+        autoIncrement: true,
         type: Sequelize.INTEGER
       },
       createdAt: {
+        allowNull: false,
         allowNull: false,
         type: Sequelize.DATE
       },

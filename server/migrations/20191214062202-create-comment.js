@@ -15,6 +15,8 @@ module.exports = {
         type: Sequelize.TEXT
       },
       userId: {
+        allowNull: false,
+        autoIncrement: true,
         type: Sequelize.INTEGER
       },
       createdAt: {
