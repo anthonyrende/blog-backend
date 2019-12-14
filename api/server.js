@@ -3,15 +3,16 @@ const helmet = require("helmet");
 const cors = require("cors");
 const secrets = require("../config/secrets.js");
 // const request = require('request')
+const server = express();
 
 import bodyParser from "body-parser"
-
+// const bodyParser = require("body-parser")
 // Parse incoming requests data
-// server.use(bodyParser.json());
-// server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: false }));
 
 // console.log("environment:", secrets.environment);
-const server = express();
+
 
 server.use(express.json());
 server.use(helmet());
