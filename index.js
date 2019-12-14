@@ -1,24 +1,15 @@
+// require('dotenv').config();
+// const server = require('./api/server.js');
+// const defaults = require('./oldserver/config/defaults')
+// //./server/config/defaults
+
+// server.listen(defaults.port, () => {
+//   console.log(`\n*** Server Running on http://localhost:${defaults.port} ***\n`);
+// })
 require('dotenv').config();
-const server = require('./api/server.js');
-const defaults = require('./oldserver/config/defaults')
-//./server/config/defaults
-// const Sequelize = require('sequelize'), sequelize = null
-// const http = require('http')
 
-// if (process.env.DATABASE_URL) {
-//     // the application is executed on Heroku ... use the postgres database
-//     sequelize = new Sequelize(process.env.DATABASE_URL, {
-//       dialect:  'postgres',
-//       protocol: 'postgres'
-//     })
-//   }
+const server = require('./server');
 
-//   db.sequelize.sync().then(function() {
-//     http.createServer(server).listen(server.get('port'), function(){
-//       console.log('Express server listening on port ' + server.get('port'));
-//     });
-//   });
+const PORT = process.env.PORT || 3300;
 
-server.listen(defaults.port, () => {
-  console.log(`\n*** Server Running on http://localhost:${defaults.port} ***\n`);
-})
+server.listen(PORT, () => console.log(`\n*** Server Running on http://localhost:${PORT} ***\n`));
