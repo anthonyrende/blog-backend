@@ -7,7 +7,7 @@
     "dev": "node_modules/.bin/nodemon index.js --exec babel-node --",
     "dev-test": "nodemon index.js",
     "test": "cross-env DB_ENV=test jest --watch",
-    "start-test": "node index.js",
+    "start-dev": "nodemon index.js",
     "start": "node_modules/.bin/nodemon index.js --exec babel-node --"
   },
   "author": "",
