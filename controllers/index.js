@@ -9,10 +9,10 @@ const getAllPosts = async (req, res) => {
             model: models.Comment,
             as: 'comments'
           },
-        //   {
-        //     model: models.User,
-        //     as: 'author'
-        //   }
+          {
+            model: models.User,
+            as: 'author'
+          }
         ]
       });
       return res.status(200).json({ posts });
@@ -31,16 +31,16 @@ const getPostById = async(req, res) => {
                 {
                     model: models.Comment,
                     as: 'comments',
-                //     include: [
-                //         {
-                //             model: models.User,
-                //             as: 'author',
-                //         }
-                //     ]
-                // },
-                // {
-                //     model: models.User,
-                //     as: 'author'
+                    include: [
+                        {
+                            model: models.User,
+                            as: 'author',
+                        }
+                    ]
+                },
+                {
+                    model: models.User,
+                    as: 'author'
                  }
             ]
             

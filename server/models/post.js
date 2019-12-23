@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       'onDelete': 'CASCADE'
     });
 
-    // Post.belongsTo(models.User, {
-    //   foreignKey: 'userId',
-    //   as: author,
-    //   onDelete: 'CASCADE'
-    // })
+    Post.belongsTo(models.User, {
+      foreignKey: 'userId',
+      as: author,
+      onDelete: 'CASCADE'
+    })
   };
   return Post;
 };

@@ -4,6 +4,8 @@ const controllers = require('../controllers');
 const router = Router();
 
 router.get('/', (req, res) => res.send('Welcome'))
+
+// *****POST ROUTES******
 // get all posts
 router.get('/posts', controllers.getAllPosts);
 // get post by Id
