@@ -5,14 +5,15 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING
   }, {});
   User.associate = function(models) {
+
    User.hasMany(models.Post, {
-     foriegnKey: 'userId',
+    foreignKey: 'userId',
      as: 'posts',
      onDelete: 'CASCADE',
    });
 
    User.hasMany(models.Comment, {
-     foriegnKey: 'userId',
+    foreignKey: 'userId',
      as: 'comments',
      onDelete: 'CASCADE',
    })
